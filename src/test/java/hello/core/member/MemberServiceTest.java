@@ -7,8 +7,9 @@ public class MemberServiceTest {
 
     MemberService memberService = new MemberServiceImpl();
 
+    // 회원가입 기능 테스트
     @Test
-    void join() {
+    public void join() {
         // given
         Member member = new Member(1L, "memberA", Grade.VIP);
 
@@ -19,4 +20,5 @@ public class MemberServiceTest {
         // then
         Assertions.assertThat(member).isEqualTo(findMember);
     }
+
 }
