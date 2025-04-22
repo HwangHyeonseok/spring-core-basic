@@ -2,7 +2,7 @@ package hello.core;
 
 import hello.core.Order.Order;
 import hello.core.Order.OrderService;
-import hello.core.discount.OrderServiceImpl;
+import hello.core.Order.OrderServiceImpl;
 import hello.core.member.Grade;
 import hello.core.member.Member;
 import hello.core.member.MemberService;
