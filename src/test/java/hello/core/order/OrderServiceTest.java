@@ -16,6 +16,7 @@ public class OrderServiceTest {
     OrderService orderService = new OrderServiceImpl();
 
     // member가 물품을 주문할 때 할인이 잘 적용되는지 체크
+    //
     @Test
     public void createOrder() {
         // given
