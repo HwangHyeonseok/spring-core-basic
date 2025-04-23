@@ -10,9 +10,12 @@ import hello.core.member.MemberServiceImpl;
 
 public class OrderApp {
     public static void main(String[] args) {
+        AppConfig appconfig = new AppConfig();
+        MemberService memberService = appconfig.memberService();
+        OrderService orderService = appconfig.orderService();
 
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+//        MemberService memberService = new MemberServiceImpl();
+//        OrderService orderService = new OrderServiceImpl();
 
         long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
