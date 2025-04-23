@@ -16,7 +16,7 @@ public class OrderServiceTest {
 
     MemberService memberService;
     OrderService orderService;
-
+    // 테스트 실행 이전에 함수 호출됨
     @BeforeEach
     public void beforeEach() {
         AppConfig appConfig = new AppConfig();
