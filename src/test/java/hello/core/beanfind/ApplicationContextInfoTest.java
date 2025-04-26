@@ -25,6 +25,7 @@ public class ApplicationContextInfoTest {
         String[] beanDefinitionNames = ac.getBeanDefinitionNames(); // 스프링에 등록된 모든 Bean 이름을 조회해서 beanDefinitionNames에 저장
         for (String beanDefinitionName : beanDefinitionNames) {
             BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName);
+            System.out.println("beanDefinition = " + beanDefinition);
 
             // ROLE_APPLICATION : 직접 등록한 애플리케이션 빈
             // ROLE_INFRASTRUCTURE : 스프링이 내부에서 사용하는 빈

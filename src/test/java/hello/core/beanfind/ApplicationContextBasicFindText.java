@@ -15,9 +15,18 @@ public class ApplicationContextBasicFindText {
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
     @Test
-    @DisplayName("빈 이름으로 조회")
+    @DisplayName("빈 이름+타입 지정으로 조회")
     public void findBeanByName() {
         MemberService memberService = ac.getBean("memberService", MemberService.class);
+//        System.out.println("memberService = " + memberService);
+//        System.out.println("memberService.getClass() = " + memberService.getClass());
+        Assertions.assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
+    }
+
+    @Test
+    @DisplayName("빈 이름으로만 조회")
+    public void findBeanByOnlyName() {
+        Object memberService = ac.getBean("memberService");
 //        System.out.println("memberService = " + memberService);
 //        System.out.println("memberService.getClass() = " + memberService.getClass());
         Assertions.assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
@@ -42,7 +51,7 @@ public class ApplicationContextBasicFindText {
     }
 
     @Test
-    @DisplayName("빈 이름으로 조회 X")
+    @DisplayName("없는 빈 이름으로 조회 시")
     public void findBeanByNameX() {
 //        MemberService xxxxx = ac.getBean("xxxxx", MemberService.class); // NoSuchBeanDefinitionException 예외 발생
         org.junit.jupiter.api.Assertions.assertThrows(NoSuchBeanDefinitionException.class,

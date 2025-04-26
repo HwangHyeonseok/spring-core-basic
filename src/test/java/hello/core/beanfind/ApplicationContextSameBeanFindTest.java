@@ -35,12 +35,22 @@ public class ApplicationContextSameBeanFindTest {
     @Test
     @DisplayName("특정 타입 모두 조회하기")
     public void findAllBeanByType() {
-        Map<String, MemberRepository> beansOfType = ac.getBeansOfType(MemberRepository.class); // MemberRepository 클래스에서 Bean으로 등록된 객체들을 모두 찾아서 beansOfType에 넣는다. (빈 이름, 빈 객체) 의 Map 구조
+        Map<String, MemberRepository> beansOfType = ac.getBeansOfType(MemberRepository.class); // 빈 컨테이너(ac)에 등록된 빈들 중 MemberRepository 타입인 것을 모두 찾아서 beansOfType에 넣는다. (빈 이름, 빈 객체) 의 Map 구조로 넣는다.
         for (String key : beansOfType.keySet()) { // 그 빈들의 이름(key 값)을 하나씩 꺼내서 반복한다.
             System.out.println("key = " + key + " value = " + beansOfType.get(key));
         }
         System.out.println("beansOfType = " + beansOfType);
         org.assertj.core.api.Assertions.assertThat(beansOfType.size()).isEqualTo(2); // 빈의 개수가 2개인지 검사
+    }
+
+    @Test
+    @DisplayName("Object 타입으로 모두 조회하기")
+    public void findAllBeanByObjectType() {
+        Map<String, Object> beansOfType = ac.getBeansOfType(Object.class);
+        for (String key : beansOfType.keySet()) {
+            System.out.println("key = " + key + " value = " + beansOfType.get(key));
+        }
+//        org.assertj.core.api.Assertions.assertThat(beansOfType.size()).isEqualTo(16);
     }
 
 
