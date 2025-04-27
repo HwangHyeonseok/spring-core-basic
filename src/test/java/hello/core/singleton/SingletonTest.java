@@ -27,4 +27,19 @@ public class SingletonTest {
         // memberService1 객체와 memberService2 객체가 다른 것을 증명
         Assertions.assertThat(memberService1).isNotSameAs(memberService2);
     }
+
+    @Test
+    @DisplayName("싱글톤 패턴을 적용한 객체 사용")
+    public void singletonServiceTest() {
+        SingletonService singletonService1 = SingletonService.getInstance();
+        SingletonService singletonService2 = SingletonService.getInstance();
+
+        // 주소(참조)가 같은 것을 확인
+        System.out.println("singletonService1 = " + singletonService1);
+        System.out.println("singletonService2 = " + singletonService2);
+
+        Assertions.assertThat(singletonService1).isSameAs(singletonService2);
+        // same 은 == 이다. (참조를 비교)
+        // equal 은 .equals 이다. (값을 비교)
+    }
 }
