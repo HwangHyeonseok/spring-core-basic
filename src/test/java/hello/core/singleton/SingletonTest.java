@@ -60,7 +60,7 @@ public class SingletonTest {
         System.out.println("memberService1 = " + memberService1);
         System.out.println("memberService2 = " + memberService2);
 
-        // memberService1 객체와 memberService2 객체가 다른 것을 증명
+        // memberService1 객체와 memberService2 객체가 같은 것을 증명
         Assertions.assertThat(memberService1).isSameAs(memberService2);
     }
 }
