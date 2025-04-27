@@ -8,11 +8,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-// new로 만든 객체의 참조가 다르다는 것을 확인
 public class SingletonTest {
 
     @Test
-    @DisplayName("스프링 없는 순수한 DI 컨테이너")
+    @DisplayName("스프링 없는 순수한 DI 컨테이너 - new로 만든 객체의 참조가 다르다는 것을 확인")
     public void pureContainer() {
         AppConfig appConfig = new AppConfig();
 
