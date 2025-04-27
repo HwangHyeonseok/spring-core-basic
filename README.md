@@ -23,7 +23,7 @@
 섹션 3. 스프링 핵심 원리 이해1 - 예제 만들기 (#다형성은 만족하지만 OCP, DIP는 만족하지 않는 예제 만들기)<br>
 [섹션 4. 스프링 핵심 원리 이해2 - 객체지향 원리 적용 (#OCP, DIP를 만족시키는 방법, #AppConfig, #스프링 컨테이너와 스프링 빈)](https://hyeonstone.tistory.com/entry/8%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9D%98-%EC%9B%90%EB%A6%AC-%EC%A0%81%EC%9A%A9)<br>
 [섹션 5. 스프링 컨테이너와 스프링 빈(#스프링 컨테이너 만들기, #스프링 빈 조회, #XML와 JAVA 버전의 빈 객체 관리 Config 구현)](https://hyeonstone.tistory.com/entry/9%EC%8A%A4%ED%94%84%EB%A7%81-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%99%80-%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B9%88)<br>
-섹션 6. 싱글톤 컨테이너<br>
+[섹션 6. 싱글톤 컨테이너](https://hyeonstone.tistory.com/entry/10%EC%8A%A4%ED%94%84%EB%A7%81-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EB%8A%94-%EC%8B%B1%EA%B8%80%ED%86%A4%EC%9D%84-%EC%A4%80%EC%88%98%ED%95%9C%EB%8B%A4)<br>
 [섹션 7. 컴포넌트 스캔](#)<br>
 [섹션 8. 의존관계 자동 주입](#)<br>
 섹션 9. 빈 생명주기 콜백<br>
