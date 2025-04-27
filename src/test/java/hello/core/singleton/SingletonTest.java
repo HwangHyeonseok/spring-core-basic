@@ -6,6 +6,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+// new로 만든 객체의 참조가 다르다는 것을 확인
 public class SingletonTest {
 
     @Test
